@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <vector>
 
-#define BURST_LEN 3
+#define BURST_LEN 1
 
 using namespace std;
 
@@ -38,7 +38,7 @@ int init_process(Process& proc, const int& i)
     proc.completed = 0;
     proc.total_processor_time = 0;
 
-    proc.arrival_time = rand() % 50;        
+    proc.arrival_time = rand() % 50;
     proc.waiting_start = proc.arrival_time;
 
     for(int i = 0; i < BURST_LEN; i++)
